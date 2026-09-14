@@ -1,15 +1,10 @@
 <!doctype html>
+
 <html lang="mr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>SP Desi Eggs Farm | Jalna</title>
-
-<style>
-*{
-  box-sizing:border-box;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>SP Desi Eggs Farm | Jalna</title><style>
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -22,47 +17,60 @@ body{
 header{
   background:#2874f0;
   color:white;
-  padding:12px 15px;
+  padding:10px 12px;
   position:sticky;
   top:0;
   z-index:100;
   box-shadow:0 2px 6px rgba(0,0,0,.2);
 }
 
-.header-top{
+.header-inner{
   max-width:1100px;
   margin:auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-.logo{
-  font-size:22px;
+.logo-img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:white;
+  padding:4px;
+  object-fit:contain;
+}
+
+.logo-text{
+  font-size:21px;
   font-weight:800;
 }
 
 .sub{
-  font-size:13px;
+  font-size:12px;
   margin-top:3px;
-  opacity:.95;
 }
 
-/* HERO */
-.hero{
-  background:white;
+/* BANNER */
+.banner{
+  max-width:1100px;
+  margin:10px auto;
+  background:linear-gradient(135deg,#fff8df,#fff);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 1px 5px rgba(0,0,0,.15);
+  padding:18px 15px;
   text-align:center;
-  padding:25px 12px;
-  margin-bottom:10px;
 }
 
-.hero h1{
+.banner h1{
   margin:0;
-  color:#222;
   font-size:27px;
 }
 
-.hero p{
-  margin:8px 0 0;
+.banner p{
+  margin:7px 0 0;
   color:#666;
-  font-size:15px;
 }
 
 /* MAIN */
@@ -72,45 +80,40 @@ header{
   padding:10px;
 }
 
-/* PRODUCTS GRID */
+.section-title{
+  font-size:21px;
+  margin:5px 0 12px;
+}
+
+/* PRODUCTS */
 .products{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
 }
 
-/* PRODUCT CARD */
 .product{
   background:white;
-  border-radius:4px;
+  border-radius:5px;
   overflow:hidden;
-  box-shadow:0 1px 4px rgba(0,0,0,.15);
-  transition:.2s;
+  box-shadow:0 1px 5px rgba(0,0,0,.15);
 }
 
-.product:hover{
-  box-shadow:0 3px 12px rgba(0,0,0,.20);
-}
-
-/* SMALL PRODUCT IMAGE */
 .product-image{
-  width:100%;
-  height:210px;
+  height:190px;
   background:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:12px;
+  padding:10px;
 }
 
 .product-image img{
   width:100%;
   height:100%;
   object-fit:contain;
-  display:block;
 }
 
-/* PRODUCT CONTENT */
 .product-content{
   padding:12px;
 }
@@ -118,7 +121,6 @@ header{
 .product-title{
   margin:0;
   font-size:18px;
-  font-weight:700;
 }
 
 .description{
@@ -138,11 +140,18 @@ header{
   font-weight:bold;
 }
 
+.badge{
+  display:block;
+  color:#d32f2f;
+  font-size:12px;
+  font-weight:bold;
+  margin-top:7px;
+}
+
 .price{
-  margin-top:9px;
+  margin-top:8px;
   font-size:21px;
   font-weight:800;
-  color:#222;
 }
 
 .old-price{
@@ -152,67 +161,82 @@ header{
   margin-left:5px;
 }
 
-.badge{
-  display:inline-block;
-  margin-top:7px;
-  color:#d32f2f;
-  font-size:12px;
-  font-weight:bold;
-}
-
-/* QUANTITY */
 .quantity{
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   gap:18px;
   margin:14px 0;
 }
 
 .quantity button{
-  width:38px;
-  height:38px;
+  width:36px;
+  height:36px;
   border:1px solid #ddd;
-  background:#fff;
   border-radius:50%;
-  font-size:23px;
+  background:white;
+  font-size:22px;
   font-weight:bold;
-  cursor:pointer;
-}
-
-.quantity button:active{
-  transform:scale(.9);
 }
 
 .quantity span{
-  min-width:30px;
+  min-width:25px;
   text-align:center;
-  font-size:19px;
+  font-size:18px;
   font-weight:bold;
 }
 
-/* TOTAL */
 .total{
   text-align:center;
-  font-size:15px;
   margin-bottom:10px;
 }
 
-/* WHATSAPP */
-.whatsapp{
+/* ADD CART */
+.cart-btn{
   width:100%;
   border:0;
-  border-radius:3px;
-  padding:12px 8px;
-  background:#16a34a;
+  padding:11px;
+  background:#ff9f00;
   color:white;
-  font-size:15px;
+  font-size:14px;
   font-weight:bold;
-  cursor:pointer;
+  border-radius:3px;
 }
 
-.whatsapp:active{
-  transform:scale(.98);
+/* ORDER BOX */
+.order-box{
+  display:none;
+  background:white;
+  margin-top:15px;
+  padding:18px;
+  border-radius:5px;
+  box-shadow:0 1px 5px rgba(0,0,0,.18);
+}
+
+.order-box h2{
+  margin-top:0;
+  font-size:21px;
+}
+
+.order-input{
+  width:100%;
+  padding:13px;
+  margin:6px 0;
+  border:1px solid #ddd;
+  border-radius:4px;
+  font-size:15px;
+}
+
+.place-order{
+  width:100%;
+  margin-top:10px;
+  padding:14px;
+  border:0;
+  border-radius:4px;
+  background:#fb641b;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
 }
 
 /* INFO */
@@ -220,7 +244,7 @@ header{
   background:white;
   margin-top:15px;
   padding:16px;
-  border-radius:4px;
+  border-radius:5px;
   box-shadow:0 1px 4px rgba(0,0,0,.12);
   line-height:1.7;
   font-size:14px;
@@ -243,8 +267,7 @@ footer{
   }
 
   .product-image{
-    height:145px;
-    padding:8px;
+    height:140px;
   }
 
   .product-content{
@@ -255,247 +278,208 @@ footer{
     font-size:15px;
   }
 
-  .description{
-    font-size:12px;
-  }
-
   .price{
     font-size:18px;
   }
 
   .quantity{
-    gap:12px;
-    margin:10px 0;
+    gap:10px;
   }
 
-  .quantity button{
-    width:34px;
-    height:34px;
-    font-size:20px;
+  .banner h1{
+    font-size:22px;
   }
 
-  .whatsapp{
-    font-size:13px;
-    padding:10px 5px;
-  }
-
-  .hero h1{
-    font-size:23px;
-  }
-}
-
-/* VERY SMALL MOBILE */
-@media(max-width:380px){
-
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .product-image{
-    height:125px;
-  }
-
-  .product-title{
-    font-size:14px;
-  }
-
-  .price{
+  .logo-text{
     font-size:17px;
   }
 }
-</style>
-</head>
+</style></head><body><!-- HEADER --><header>
+  <div class="header-inner"><img
+  class="logo-img"
+  src="logo.png"
+  alt="SP Desi Eggs Farm"
+  onerror="this.style.display='none';"
+>
 
-<body>
-
-<!-- HEADER -->
-<header>
-  <div class="header-top">
-    <div class="logo">🥚 SP Desi Eggs Farm</div>
-    <div class="sub">Fresh Desi Eggs • Jalna City</div>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>ताजे देशी अंडी घरपोच 🥚</h1>
-  <p>Fresh • Desi • Hygienic • Home Delivery</p>
-</section>
-
-<!-- PRODUCTS -->
-<div class="container">
-
-<div class="products">
-
-<!-- 6 EGGS -->
-<div class="product" data-product="6 Desi Eggs" data-price="90">
-
-  <div class="product-image">
-    <img
-      src="6-eggs.jpg"
-      alt="6 Desi Eggs"
-      onerror="this.src='https://placehold.co/500x400?text=6+Desi+Eggs';">
-  </div>
-
-  <div class="product-content">
-
-    <h2 class="product-title">6 Desi Eggs</h2>
-
-    <div class="description">
-      Fresh देशी अंडी • Farm Fresh
-    </div>
-
-    <span class="rating">★ 4.8</span>
-
-    <div class="badge">BEST SELLER</div>
-
-    <div class="price">
-      ₹90
-      <span class="old-price">₹100</span>
-    </div>
-
-    <div class="quantity">
-      <button onclick="changeQuantity(this,-1)">−</button>
-      <span>1</span>
-      <button onclick="changeQuantity(this,1)">+</button>
-    </div>
-
-    <div class="total">
-      एकूण: ₹<b class="total-price">90</b>
-    </div>
-
-    <button class="whatsapp" onclick="sendOrder(this)">
-      📱 WhatsApp Order
-    </button>
-
-  </div>
+<div>
+  <div class="logo-text">🥚 SP Desi Eggs Farm</div>
+  <div class="sub">Fresh Desi Eggs • Jalna City</div>
 </div>
 
-
-<!-- 12 EGGS -->
-<div class="product" data-product="12 Desi Eggs" data-price="180">
-
-  <div class="product-image">
-    <img
-      src="12-eggs.jpg"
-      alt="12 Desi Eggs"
-      onerror="this.src='https://placehold.co/500x400?text=12+Desi+Eggs';">
   </div>
+</header><!-- BANNER --><section class="banner">  <h1>🥚 ताजे देशी अंडी घरपोच</h1>  <p>
+    Fresh • Desi • Hygienic • Farm to Home
+  </p>  <p>
+    📍 Jalna City &nbsp; | &nbsp; 📱 WhatsApp Order
+  </p></section><div class="container"><h2 class="section-title">🥚 Desi Eggs Products</h2><div class="products"><!-- 6 EGGS --><div class="product"
+     data-product="6 Desi Eggs"
+     data-price="90">  <div class="product-image"><img
+  src="6-eggs.jpg"
+  alt="6 Desi Eggs"
+  onerror="this.src='https://placehold.co/500x400/fff/2874f0?text=6+DESI+EGGS';"
+>
 
-  <div class="product-content">
+  </div>  <div class="product-content"><h2 class="product-title">6 Desi Eggs</h2>
 
-    <h2 class="product-title">12 Desi Eggs</h2>
-
-    <div class="description">
-      Fresh देशी अंडी • Farm Fresh
-    </div>
-
-    <span class="rating">★ 4.9</span>
-
-    <div class="badge">POPULAR</div>
-
-    <div class="price">
-      ₹180
-      <span class="old-price">₹200</span>
-    </div>
-
-    <div class="quantity">
-      <button onclick="changeQuantity(this,-1)">−</button>
-      <span>1</span>
-      <button onclick="changeQuantity(this,1)">+</button>
-    </div>
-
-    <div class="total">
-      एकूण: ₹<b class="total-price">180</b>
-    </div>
-
-    <button class="whatsapp" onclick="sendOrder(this)">
-      📱 WhatsApp Order
-    </button>
-
-  </div>
+<div class="description">
+  Fresh देशी अंडी • Farm Fresh
 </div>
 
+<span class="rating">★ 4.8</span>
 
-<!-- 30 EGGS -->
-<div class="product" data-product="30 Desi Eggs" data-price="450">
+<div class="badge">BEST SELLER</div>
 
-  <div class="product-image">
-    <img
-      src="30-eggs.jpg"
-      alt="30 Desi Eggs"
-      onerror="this.src='https://placehold.co/500x400?text=30+Desi+Eggs';">
-  </div>
+<div class="price">
+  ₹90
+  <span class="old-price">₹100</span>
+</div>
 
-  <div class="product-content">
+<div class="quantity">
+  <button onclick="changeQuantity(this,-1)">−</button>
+  <span>1</span>
+  <button onclick="changeQuantity(this,1)">+</button>
+</div>
 
-    <h2 class="product-title">30 Desi Eggs</h2>
+<div class="total">
+  एकूण: ₹<b class="total-price">90</b>
+</div>
 
-    <div class="description">
-      Fresh देशी अंडी • Farm Fresh
-    </div>
-
-    <span class="rating">★ 4.9</span>
-
-    <div class="badge">VALUE PACK</div>
-
-    <div class="price">
-      ₹450
-      <span class="old-price">₹500</span>
-    </div>
-
-    <div class="quantity">
-      <button onclick="changeQuantity(this,-1)">−</button>
-      <span>1</span>
-      <button onclick="changeQuantity(this,1)">+</button>
-    </div>
-
-    <div class="total">
-      एकूण: ₹<b class="total-price">450</b>
-    </div>
-
-    <button class="whatsapp" onclick="sendOrder(this)">
-      📱 WhatsApp Order
-    </button>
+<button class="cart-btn" onclick="selectProduct(this)">
+  🛒 Add to Cart
+</button>
 
   </div>
+</div><!-- 12 EGGS --><div class="product"
+     data-product="12 Desi Eggs"
+     data-price="180">  <div class="product-image"><img
+  src="12-eggs.jpg"
+  alt="12 Desi Eggs"
+  onerror="this.src='https://placehold.co/500x400/fff/2874f0?text=12+DESI+EGGS';"
+>
+
+  </div>  <div class="product-content"><h2 class="product-title">12 Desi Eggs</h2>
+
+<div class="description">
+  Fresh देशी अंडी • Farm Fresh
 </div>
 
+<span class="rating">★ 4.9</span>
+
+<div class="badge">POPULAR</div>
+
+<div class="price">
+  ₹180
+  <span class="old-price">₹200</span>
 </div>
 
-
-<!-- INFORMATION -->
-<div class="info">
-
-  <b>📍 Delivery Location</b><br>
-  Jalna City आणि आसपासच्या भागात घरपोच Delivery.
-
-  <br><br>
-
-  <b>🥚 SP Desi Eggs Farm</b><br>
-  ताजे देशी अंडी • Farm Fresh • Hygienic
-
-  <br><br>
-
-  <b>📱 Order:</b><br>
-  WhatsApp वर Order करा.
+<div class="quantity">
+  <button onclick="changeQuantity(this,-1)">−</button>
+  <span>1</span>
+  <button onclick="changeQuantity(this,1)">+</button>
 </div>
 
+<div class="total">
+  एकूण: ₹<b class="total-price">180</b>
 </div>
 
+<button class="cart-btn" onclick="selectProduct(this)">
+  🛒 Add to Cart
+</button>
 
-<!-- FOOTER -->
-<footer>
+  </div>
+</div><!-- 30 EGGS --><div class="product"
+     data-product="30 Desi Eggs"
+     data-price="450">  <div class="product-image"><img
+  src="30-eggs.jpg"
+  alt="30 Desi Eggs"
+  onerror="this.src='https://placehold.co/500x400/fff/2874f0?text=30+DESI+EGGS';"
+>
+
+  </div>  <div class="product-content"><h2 class="product-title">30 Desi Eggs</h2>
+
+<div class="description">
+  Fresh देशी अंडी • Farm Fresh
+</div>
+
+<span class="rating">★ 4.9</span>
+
+<div class="badge">VALUE PACK</div>
+
+<div class="price">
+  ₹450
+  <span class="old-price">₹500</span>
+</div>
+
+<div class="quantity">
+  <button onclick="changeQuantity(this,-1)">−</button>
+  <span>1</span>
+  <button onclick="changeQuantity(this,1)">+</button>
+</div>
+
+<div class="total">
+  एकूण: ₹<b class="total-price">450</b>
+</div>
+
+<button class="cart-btn" onclick="selectProduct(this)">
+  🛒 Add to Cart
+</button>
+
+  </div>
+</div></div><!-- ORDER FORM --><div class="order-box" id="orderBox">  <h2>🛒 Your Order</h2>  <div id="orderSummary"></div><input
+id="customerName"
+class="order-input"
+type="text"
+placeholder="तुमचे नाव"
+
+«»
+
+<input
+id="customerPhone"
+class="order-input"
+type="tel"
+placeholder="मोबाईल नंबर"
+
+«»
+
+  <textarea
+    id="customerAddress"
+    class="order-input"
+    rows="3"
+    placeholder="पूर्ण पत्ता / Delivery Address"
+  ></textarea><button
+class="place-order"
+onclick="placeOrder()">
+✅ PLACE ORDER
+</button>
+
+</div><!-- INFO --><div class="info"><b>📍 Delivery Location</b><br>
+Jalna City आणि आसपासच्या भागात Home Delivery.
+
+<br><br>
+
+<b>🥚 SP Desi Eggs Farm</b><br>
+ताजे देशी अंडी • Farm Fresh • Hygienic
+
+<br><br>
+
+<b>📱 WhatsApp</b><br>
+Order केल्यानंतर तुमचा Order WhatsApp वर पाठवला जाईल.
+
+</div></div><footer>
   © 2026 SP Desi Eggs Farm | Jalna
-</footer>
+</footer><script>
 
+let selectedProduct = "";
+let selectedQuantity = 1;
+let selectedTotal = 0;
 
-<script>
 
 /* QUANTITY */
-function changeQuantity(button, change){
+function changeQuantity(button,change){
 
-  const product = button.closest(".product");
+  const product =
+    button.closest(".product");
 
   const quantity =
     product.querySelector(".quantity span");
@@ -503,7 +487,7 @@ function changeQuantity(button, change){
   let number =
     parseInt(quantity.innerText);
 
-  number = number + change;
+  number += change;
 
   if(number < 1){
     number = 1;
@@ -514,61 +498,113 @@ function changeQuantity(button, change){
   const price =
     parseInt(product.dataset.price);
 
-  const total =
+  product.querySelector(".total-price").innerText =
     price * number;
-
-  product.querySelector(".total-price").innerText = total;
 }
 
 
-/* WHATSAPP ORDER */
-function sendOrder(button){
+/* SELECT PRODUCT */
+function selectProduct(button){
 
   const product =
     button.closest(".product");
 
-  const productName =
+  selectedProduct =
     product.dataset.product;
+
+  selectedQuantity =
+    parseInt(
+      product.querySelector(".quantity span").innerText
+    );
 
   const price =
     parseInt(product.dataset.price);
 
-  const quantity =
-    parseInt(
-      product.querySelector(
-        ".quantity span"
-      ).innerText
-    );
+  selectedTotal =
+    price * selectedQuantity;
 
-  const total =
-    price * quantity;
+  document.getElementById("orderSummary").innerHTML =
+    "<b>" + selectedProduct + "</b><br>" +
+    "Quantity: " + selectedQuantity + " Pack<br>" +
+    "Total: ₹" + selectedTotal;
+
+  const box =
+    document.getElementById("orderBox");
+
+  box.style.display = "block";
+
+  box.scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+
+/* PLACE ORDER */
+function placeOrder(){
+
+  const name =
+    document.getElementById("customerName").value.trim();
 
   const phone =
+    document.getElementById("customerPhone").value.trim();
+
+  const address =
+    document.getElementById("customerAddress").value.trim();
+
+
+  if(name === ""){
+    alert("कृपया तुमचे नाव टाका.");
+    return;
+  }
+
+  if(phone === ""){
+    alert("कृपया मोबाईल नंबर टाका.");
+    return;
+  }
+
+  if(address === ""){
+    alert("कृपया पूर्ण पत्ता टाका.");
+    return;
+  }
+
+
+  const orderId =
+    "SP" +
+    Date.now().toString().slice(-6);
+
+
+  const whatsappNumber =
     "919322209442";
 
+
   const message =
-`नमस्कार SP Desi Eggs Farm 🥚
+`🥚 SP Desi Eggs Farm - NEW ORDER
 
-मला अंड्यांची Order करायची आहे.
+Order ID: ${orderId}
 
-Product: ${productName}
-Quantity: ${quantity} Pack
-Total: ₹${total}
+Product: ${selectedProduct}
+Quantity: ${selectedQuantity} Pack
+Total: ₹${selectedTotal}
 
-नाव:
-पत्ता:
-मोबाईल नंबर:`;
+Customer Name: ${name}
+Mobile: ${phone}
+Delivery Address: ${address}
 
-  const url =
+📍 Jalna City
+
+Thank you! 🙏`;
+
+
+  const whatsappURL =
     "https://wa.me/" +
-    phone +
+    whatsappNumber +
     "?text=" +
     encodeURIComponent(message);
 
-  window.open(url,"_blank");
+
+  window.location.href =
+    whatsappURL;
 }
 
-</script>
-
-</body>
+</script></body>
 </html>
