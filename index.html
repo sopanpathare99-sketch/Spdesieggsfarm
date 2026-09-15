@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="mr">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
 <title>SP Desi Eggs Farm | Jalna</title>
 
 <style>
-
 *{
   box-sizing:border-box;
 }
@@ -20,8 +18,7 @@ body{
   color:#222;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header{
   background:#2874f0;
   color:white;
@@ -48,7 +45,8 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:28px;
+  font-size:29px;
+  box-shadow:0 1px 4px rgba(0,0,0,.2);
 }
 
 .logo-name{
@@ -61,25 +59,25 @@ header{
   margin-top:3px;
 }
 
-/* ================= BANNER ================= */
-
+/* BANNER */
 .banner{
   max-width:1100px;
   margin:10px auto;
-  padding:20px 12px;
-  text-align:center;
-  background:linear-gradient(135deg,#fff4c7,#fff);
   border-radius:8px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#fff4c7,#ffffff);
   box-shadow:0 2px 7px rgba(0,0,0,.15);
+  padding:22px 15px;
+  text-align:center;
 }
 
 .banner-icon{
-  font-size:45px;
+  font-size:50px;
 }
 
 .banner h1{
   margin:5px 0;
-  font-size:26px;
+  font-size:27px;
 }
 
 .banner p{
@@ -97,8 +95,7 @@ header{
   font-weight:bold;
 }
 
-/* ================= MAIN ================= */
-
+/* MAIN */
 .container{
   max-width:1100px;
   margin:auto;
@@ -110,8 +107,7 @@ header{
   margin:5px 0 12px;
 }
 
-/* ================= PRODUCTS ================= */
-
+/* PRODUCTS */
 .products{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -120,7 +116,7 @@ header{
 
 .product{
   background:white;
-  border-radius:7px;
+  border-radius:6px;
   overflow:hidden;
   box-shadow:0 1px 5px rgba(0,0,0,.16);
 }
@@ -130,28 +126,30 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  background:white;
+  background:#fff;
+  position:relative;
 }
 
+/* EGG PACK */
 .egg-pack{
   width:145px;
   height:145px;
   border-radius:12px;
   background:#fafafa;
   border:1px solid #ddd;
-
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-
   box-shadow:0 2px 5px rgba(0,0,0,.12);
 }
 
 .eggs{
-  font-size:42px;
+  font-size:43px;
   line-height:1.1;
   letter-spacing:-7px;
+  max-width:120px;
+  text-align:center;
 }
 
 .pack-number{
@@ -213,8 +211,7 @@ header{
   margin-left:5px;
 }
 
-/* ================= QUANTITY ================= */
-
+/* QUANTITY */
 .quantity{
   display:flex;
   align-items:center;
@@ -224,22 +221,14 @@ header{
 }
 
 .quantity button{
-  width:38px;
-  height:38px;
-
+  width:36px;
+  height:36px;
   border-radius:50%;
   border:1px solid #ddd;
-
   background:white;
-
   font-size:23px;
   font-weight:bold;
-
   cursor:pointer;
-}
-
-.quantity button:active{
-  transform:scale(.90);
 }
 
 .quantity span{
@@ -255,22 +244,16 @@ header{
   margin-bottom:10px;
 }
 
-/* ================= ADD CART ================= */
-
+/* CART BUTTON */
 .add{
   width:100%;
   border:0;
-
   padding:12px;
-
   background:#ff9f00;
   color:white;
-
   font-size:15px;
   font-weight:bold;
-
   border-radius:4px;
-
   cursor:pointer;
 }
 
@@ -278,23 +261,13 @@ header{
   transform:scale(.98);
 }
 
-.add.added{
-  background:#388e3c;
-}
-
-/* ================= ORDER BOX ================= */
-
+/* ORDER BOX */
 .order-box{
-  display:block;
-
+  display:none;
   background:white;
-
-  margin-top:18px;
-
+  margin-top:15px;
   padding:18px;
-
-  border-radius:7px;
-
+  border-radius:6px;
   box-shadow:0 1px 6px rgba(0,0,0,.18);
 }
 
@@ -305,31 +278,19 @@ header{
 
 .summary{
   background:#f5f7fa;
-
   padding:12px;
-
   border-radius:5px;
-
   line-height:1.7;
-
   margin-bottom:10px;
 }
 
-/* ================= INPUT ================= */
-
 .input{
   width:100%;
-
   padding:13px;
-
   border:1px solid #ccc;
-
   border-radius:4px;
-
   font-size:15px;
-
   margin:5px 0;
-
   outline:none;
 }
 
@@ -337,27 +298,89 @@ header{
   border-color:#2874f0;
 }
 
-/* ================= PLACE ORDER ================= */
+/* PAYMENT */
+.payment-title{
+  font-size:16px;
+  font-weight:bold;
+  margin-top:12px;
+  margin-bottom:7px;
+}
 
+.payment-options{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.payment-option{
+  flex:1;
+  min-width:140px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  padding:12px;
+  background:white;
+  cursor:pointer;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.payment-option input{
+  margin-right:5px;
+}
+
+.payment-option.selected{
+  border:2px solid #2874f0;
+  background:#eef5ff;
+}
+
+.upi-box{
+  display:none;
+  margin-top:10px;
+  padding:12px;
+  background:#f0f7ff;
+  border:1px solid #c8ddff;
+  border-radius:6px;
+  text-align:center;
+}
+
+.upi-id{
+  font-weight:bold;
+  font-size:16px;
+  color:#2874f0;
+  margin:5px 0 10px;
+  word-break:break-all;
+}
+
+.pay-upi{
+  display:inline-block;
+  text-decoration:none;
+  background:#2874f0;
+  color:white;
+  padding:11px 18px;
+  border-radius:5px;
+  font-weight:bold;
+  margin-top:5px;
+}
+
+.note{
+  font-size:11px;
+  color:#666;
+  margin-top:8px;
+  line-height:1.5;
+}
+
+/* PLACE ORDER */
 .place{
   width:100%;
-
   border:0;
-
   padding:14px;
-
-  margin-top:8px;
-
+  margin-top:12px;
   background:#fb641b;
-
   color:white;
-
   border-radius:4px;
-
   font-size:17px;
-
   font-weight:bold;
-
   cursor:pointer;
 }
 
@@ -365,38 +388,26 @@ header{
   transform:scale(.98);
 }
 
-/* ================= INFO ================= */
-
+/* INFO */
 .info{
   background:white;
-
   margin-top:15px;
-
   padding:16px;
-
   border-radius:6px;
-
   box-shadow:0 1px 5px rgba(0,0,0,.12);
-
   line-height:1.7;
-
   font-size:14px;
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer{
   text-align:center;
-
   padding:25px 10px;
-
   color:#777;
-
   font-size:13px;
 }
 
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media(max-width:700px){
 
   .products{
@@ -442,8 +453,8 @@ footer{
   }
 
   .quantity button{
-    width:34px;
-    height:34px;
+    width:33px;
+    height:33px;
     font-size:20px;
   }
 
@@ -463,698 +474,663 @@ footer{
   .banner-icon{
     font-size:40px;
   }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-
-<!-- ================= HEADER ================= -->
-
+<!-- HEADER -->
 <header>
-
-<div class="header">
-
-<div class="logo">
-🥚
-</div>
-
-<div>
-
-<div class="logo-name">
-SP Desi Eggs Farm
-</div>
-
-<div class="sub">
-Fresh Desi Eggs • Jalna City
-</div>
-
-</div>
-
-</div>
-
+  <div class="header">
+    <div class="logo">🥚</div>
+    <div>
+      <div class="logo-name">SP Desi Eggs Farm</div>
+      <div class="sub">Fresh Desi Eggs • Jalna City</div>
+    </div>
+  </div>
 </header>
 
-
-<!-- ================= BANNER ================= -->
-
+<!-- BANNER -->
 <section class="banner">
+  <div class="banner-icon">🐔 🥚</div>
 
-<div class="banner-icon">
-🐔 🥚
-</div>
+  <h1>SP Desi Eggs Farm</h1>
 
-<h1>
-SP Desi Eggs Farm
-</h1>
+  <p>
+    ताजे देशी अंडी — थेट Farm मधून तुमच्या घरापर्यंत
+  </p>
 
-<p>
-ताजे देशी अंडी — थेट Farm मधून तुमच्या घरापर्यंत
-</p>
+  <p>
+    Fresh • Desi • Hygienic • Farm to Home
+  </p>
 
-<p>
-Fresh • Desi • Hygienic • Farm to Home
-</p>
-
-<div class="delivery">
-📍 Jalna City • 🚚 Home Delivery
-</div>
-
+  <div class="delivery">
+    📍 Jalna City • 🚚 Home Delivery
+  </div>
 </section>
 
-
-<!-- ================= PRODUCTS ================= -->
-
+<!-- MAIN -->
 <div class="container">
 
 <h2 class="title">
-🥚 Desi Eggs Products
+  🥚 Desi Eggs Products
 </h2>
-
 
 <div class="products">
 
-
-<!-- ================= 6 EGGS ================= -->
-
+<!-- 6 EGGS -->
 <div class="product"
-data-product="6 Desi Eggs"
-data-price="90">
+     data-product="6 Desi Eggs"
+     data-price="90">
 
-<div class="product-image">
+  <div class="product-image">
+    <div class="egg-pack">
+      <div class="eggs">🥚🥚🥚</div>
+      <div class="pack-number">6 EGGS</div>
+      <div class="pack-text">DESI • FARM FRESH</div>
+    </div>
+  </div>
 
-<div class="egg-pack">
+  <div class="product-content">
 
-<div class="eggs">
-🥚🥚🥚
-</div>
+    <h2 class="product-title">
+      6 Desi Eggs
+    </h2>
 
-<div class="pack-number">
-6 EGGS
-</div>
+    <div class="description">
+      Fresh देशी अंडी • Farm Fresh
+    </div>
 
-<div class="pack-text">
-DESI • FARM FRESH
-</div>
+    <span class="rating">
+      ★ 4.8
+    </span>
 
-</div>
+    <div class="badge">
+      BEST SELLER
+    </div>
 
-</div>
+    <div class="price">
+      ₹90
+      <span class="old">₹100</span>
+    </div>
 
+    <div class="quantity">
+      <button onclick="changeQty(this,-1)">−</button>
 
-<div class="product-content">
+      <span>1</span>
 
-<h2 class="product-title">
-6 Desi Eggs
-</h2>
+      <button onclick="changeQty(this,1)">+</button>
+    </div>
 
-<div class="description">
-Fresh देशी अंडी • Farm Fresh
-</div>
+    <div class="total">
+      एकूण: ₹<b class="total-price">90</b>
+    </div>
 
-<span class="rating">
-★ 4.8
-</span>
+    <button class="add" onclick="addToOrder(this)">
+      🛒 ADD TO CART
+    </button>
 
-<div class="badge">
-BEST SELLER
-</div>
-
-<div class="price">
-₹90
-<span class="old">
-₹100
-</span>
-</div>
-
-
-<div class="quantity">
-
-<button
-type="button"
-class="minus">
-−
-</button>
-
-<span class="qty">
-1
-</span>
-
-<button
-type="button"
-class="plus">
-+
-</button>
-
+  </div>
 </div>
 
 
-<div class="total">
-एकूण: ₹
-<b class="total-price">
-90
-</b>
-</div>
-
-
-<button
-type="button"
-class="add">
-🛒 ADD TO CART
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ================= 12 EGGS ================= -->
-
+<!-- 12 EGGS -->
 <div class="product"
-data-product="12 Desi Eggs"
-data-price="180">
+     data-product="12 Desi Eggs"
+     data-price="180">
 
-<div class="product-image">
+  <div class="product-image">
+    <div class="egg-pack">
+      <div class="eggs">🥚🥚🥚</div>
+      <div class="pack-number">12 EGGS</div>
+      <div class="pack-text">DESI • FARM FRESH</div>
+    </div>
+  </div>
 
-<div class="egg-pack">
+  <div class="product-content">
 
-<div class="eggs">
-🥚🥚🥚
-</div>
+    <h2 class="product-title">
+      12 Desi Eggs
+    </h2>
 
-<div class="pack-number">
-12 EGGS
-</div>
+    <div class="description">
+      Fresh देशी अंडी • Farm Fresh
+    </div>
 
-<div class="pack-text">
-DESI • FARM FRESH
-</div>
+    <span class="rating">
+      ★ 4.9
+    </span>
 
-</div>
+    <div class="badge">
+      POPULAR
+    </div>
 
-</div>
+    <div class="price">
+      ₹180
+      <span class="old">₹200</span>
+    </div>
 
+    <div class="quantity">
+      <button onclick="changeQty(this,-1)">−</button>
 
-<div class="product-content">
+      <span>1</span>
 
-<h2 class="product-title">
-12 Desi Eggs
-</h2>
+      <button onclick="changeQty(this,1)">+</button>
+    </div>
 
-<div class="description">
-Fresh देशी अंडी • Farm Fresh
-</div>
+    <div class="total">
+      एकूण: ₹<b class="total-price">180</b>
+    </div>
 
-<span class="rating">
-★ 4.9
-</span>
+    <button class="add" onclick="addToOrder(this)">
+      🛒 ADD TO CART
+    </button>
 
-<div class="badge">
-POPULAR
-</div>
-
-<div class="price">
-₹180
-<span class="old">
-₹200
-</span>
-</div>
-
-
-<div class="quantity">
-
-<button
-type="button"
-class="minus">
-−
-</button>
-
-<span class="qty">
-1
-</span>
-
-<button
-type="button"
-class="plus">
-+
-</button>
-
+  </div>
 </div>
 
 
-<div class="total">
-एकूण: ₹
-<b class="total-price">
-180
-</b>
-</div>
-
-
-<button
-type="button"
-class="add">
-🛒 ADD TO CART
-</button>
-
-</div>
-
-</div>
-
-
-<!-- ================= 30 EGGS ================= -->
-
+<!-- 30 EGGS -->
 <div class="product"
-data-product="30 Desi Eggs"
-data-price="450">
+     data-product="30 Desi Eggs"
+     data-price="450">
 
-<div class="product-image">
+  <div class="product-image">
+    <div class="egg-pack">
+      <div class="eggs">🥚🥚🥚</div>
+      <div class="pack-number">30 EGGS</div>
+      <div class="pack-text">DESI • VALUE PACK</div>
+    </div>
+  </div>
 
-<div class="egg-pack">
+  <div class="product-content">
 
-<div class="eggs">
-🥚🥚🥚
-</div>
+    <h2 class="product-title">
+      30 Desi Eggs
+    </h2>
 
-<div class="pack-number">
-30 EGGS
-</div>
+    <div class="description">
+      Fresh देशी अंडी • Farm Fresh
+    </div>
 
-<div class="pack-text">
-DESI • VALUE PACK
-</div>
+    <span class="rating">
+      ★ 4.9
+    </span>
 
-</div>
+    <div class="badge">
+      VALUE PACK
+    </div>
 
-</div>
+    <div class="price">
+      ₹450
+      <span class="old">₹500</span>
+    </div>
 
+    <div class="quantity">
+      <button onclick="changeQty(this,-1)">−</button>
 
-<div class="product-content">
+      <span>1</span>
 
-<h2 class="product-title">
-30 Desi Eggs
-</h2>
+      <button onclick="changeQty(this,1)">+</button>
+    </div>
 
-<div class="description">
-Fresh देशी अंडी • Farm Fresh
-</div>
+    <div class="total">
+      एकूण: ₹<b class="total-price">450</b>
+    </div>
 
-<span class="rating">
-★ 4.9
-</span>
+    <button class="add" onclick="addToOrder(this)">
+      🛒 ADD TO CART
+    </button>
 
-<div class="badge">
-VALUE PACK
-</div>
-
-<div class="price">
-₹450
-<span class="old">
-₹500
-</span>
-</div>
-
-
-<div class="quantity">
-
-<button
-type="button"
-class="minus">
-−
-</button>
-
-<span class="qty">
-1
-</span>
-
-<button
-type="button"
-class="plus">
-+
-</button>
-
-</div>
-
-
-<div class="total">
-एकूण: ₹
-<b class="total-price">
-450
-</b>
-</div>
-
-
-<button
-type="button"
-class="add">
-🛒 ADD TO CART
-</button>
-
+  </div>
 </div>
 
 </div>
 
 
+<!-- ORDER BOX -->
+<div class="order-box" id="orderBox">
+
+  <h2>
+    🛒 Order Details
+  </h2>
+
+  <div class="summary" id="summary">
+  </div>
+
+  <!-- NAME -->
+  <input
+    class="input"
+    id="name"
+    type="text"
+    placeholder="तुमचे नाव"
+  >
+
+  <!-- MOBILE -->
+  <input
+    class="input"
+    id="phone"
+    type="tel"
+    placeholder="मोबाईल नंबर"
+    inputmode="numeric"
+    maxlength="10"
+  >
+
+  <!-- ADDRESS -->
+  <textarea
+    class="input"
+    id="address"
+    rows="3"
+    placeholder="पूर्ण Delivery Address"
+  ></textarea>
+
+
+  <!-- PAYMENT -->
+  <div class="payment-title">
+    💳 Payment Method
+  </div>
+
+  <div class="payment-options">
+
+    <label class="payment-option selected"
+           id="upiOption">
+
+      <input
+        type="radio"
+        name="payment"
+        value="UPI"
+        checked
+        onchange="selectPayment('UPI')"
+      >
+
+      📱 UPI Payment
+
+    </label>
+
+
+    <label class="payment-option"
+           id="codOption">
+
+      <input
+        type="radio"
+        name="payment"
+        value="Cash on Delivery"
+        onchange="selectPayment('COD')"
+      >
+
+      💵 Cash on Delivery
+
+    </label>
+
+  </div>
+
+
+  <!-- UPI BOX -->
+  <div class="upi-box" id="upiBox">
+
+    <div>
+      📱 <b>UPI Payment</b>
+    </div>
+
+    <div class="upi-id">
+      9322209442-2@ybl
+    </div>
+
+    <div>
+      Amount: ₹<b id="upiAmount">0</b>
+    </div>
+
+    <a
+      class="pay-upi"
+      id="upiPayButton"
+      href="#"
+      onclick="openUPI(event)"
+    >
+      💳 PAY NOW WITH UPI
+    </a>
+
+    <div class="note">
+      Pay Now केल्यावर तुमचे UPI app उघडेल.
+      Payment झाल्यानंतर खालील PLACE ORDER दाबा.
+      Website स्वतः payment verify करत नाही.
+    </div>
+
+  </div>
+
+
+  <!-- PLACE ORDER -->
+  <button
+    class="place"
+    onclick="placeOrder()"
+  >
+    ✅ PLACE ORDER
+  </button>
+
 </div>
 
 
-<!-- ================= ORDER ================= -->
-
-<div
-class="order-box"
-id="orderBox">
-
-<h2>
-🛒 Order Details
-</h2>
-
-
-<div
-class="summary"
-id="summary">
-
-Product निवडा आणि
-<b>
-ADD TO CART
-</b>
-दाबा.
-
-</div>
-
-
-<input
-class="input"
-id="name"
-type="text"
-placeholder="तुमचे नाव">
-
-
-<input
-class="input"
-id="phone"
-type="tel"
-inputmode="numeric"
-maxlength="10"
-placeholder="मोबाईल नंबर">
-
-
-<textarea
-class="input"
-id="address"
-rows="3"
-placeholder="पूर्ण Delivery Address">
-</textarea>
-
-
-<button
-class="place"
-id="placeBtn"
-type="button">
-
-✅ PLACE ORDER
-
-</button>
-
-
-</div>
-
-
-<!-- ================= INFO ================= -->
-
+<!-- INFO -->
 <div class="info">
 
-<b>
-📍 Delivery
-</b>
+  <b>📍 Delivery</b><br>
+  Jalna City आणि आसपासच्या भागात Home Delivery.
 
-<br>
+  <br><br>
 
-Jalna City आणि आसपासच्या भागात Home Delivery.
+  <b>🥚 SP Desi Eggs Farm</b><br>
+  ताजे देशी अंडी • Farm Fresh • Hygienic
 
-<br><br>
+  <br><br>
 
-<b>
-🥚 SP Desi Eggs Farm
-</b>
-
-<br>
-
-ताजे देशी अंडी • Farm Fresh • Hygienic
-
-<br><br>
-
-<b>
-📱 WhatsApp Order
-</b>
-
-<br>
-
-Place Order केल्यानंतर WhatsApp वर Order message तयार होईल.
+  <b>📱 WhatsApp Order</b><br>
+  Place Order केल्यानंतर WhatsApp वर Order message तयार होईल.
 
 </div>
-
 
 </div>
 
 
 <footer>
-
-© 2026 SP Desi Eggs Farm | Jalna
-
+  © 2026 SP Desi Eggs Farm | Jalna
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
+/* =========================
+   VARIABLES
+========================= */
+
 let selectedProduct = "";
-
 let selectedQuantity = 1;
-
 let selectedTotal = 0;
 
+let selectedPayment = "UPI";
 
-/* ================= PRODUCT FUNCTIONS ================= */
 
-document
-.querySelectorAll(".product")
-.forEach(function(product){
+/* =========================
+   QUANTITY
+========================= */
+
+function changeQty(button,change){
+
+  const product =
+    button.closest(".product");
+
+  const numberBox =
+    product.querySelector(".quantity span");
+
+  let qty =
+    parseInt(numberBox.innerText);
+
+  qty = qty + change;
+
+  if(qty < 1){
+    qty = 1;
+  }
+
+  numberBox.innerText = qty;
 
   const price =
-  Number(product.dataset.price);
+    parseInt(product.dataset.price);
 
-  const qtyBox =
-  product.querySelector(".qty");
-
-  const totalBox =
-  product.querySelector(".total-price");
-
-  const minus =
-  product.querySelector(".minus");
-
-  const plus =
-  product.querySelector(".plus");
-
-  const add =
-  product.querySelector(".add");
-
-
-  /* MINUS */
-
-  minus.onclick = function(){
-
-    let qty =
-    parseInt(qtyBox.innerText);
-
-    if(qty > 1){
-
-      qty--;
-
-    }
-
-    qtyBox.innerText =
-    qty;
-
-    totalBox.innerText =
+  const total =
     price * qty;
 
-  };
+  product.querySelector(".total-price").innerText =
+    total;
+
+}
 
 
-  /* PLUS */
+/* =========================
+   ADD TO CART
+========================= */
 
-  plus.onclick = function(){
+function addToOrder(button){
 
-    let qty =
-    parseInt(qtyBox.innerText);
+  const product =
+    button.closest(".product");
 
-    qty++;
-
-    qtyBox.innerText =
-    qty;
-
-    totalBox.innerText =
-    price * qty;
-
-  };
-
-
-  /* ADD TO CART */
-
-  add.onclick = function(){
-
-    selectedProduct =
+  selectedProduct =
     product.dataset.product;
 
-    selectedQuantity =
-    parseInt(qtyBox.innerText);
+  selectedQuantity =
+    parseInt(
+      product.querySelector(".quantity span").innerText
+    );
 
-    selectedTotal =
+  const price =
+    parseInt(product.dataset.price);
+
+  selectedTotal =
     price * selectedQuantity;
 
 
-    document
-    .getElementById("summary")
-    .innerHTML =
+  /* SUMMARY */
 
-    "<b>Product:</b> "
-    + selectedProduct
+  document.getElementById("summary").innerHTML =
+    "<b>Product:</b> " +
+    selectedProduct +
 
-    + "<br>"
+    "<br><b>Quantity:</b> " +
+    selectedQuantity +
+    " Pack" +
 
-    + "<b>Quantity:</b> "
-    + selectedQuantity
-    + " Pack"
-
-    + "<br>"
-
-    + "<b>Total:</b> ₹"
-    + selectedTotal;
+    "<br><b>Total:</b> ₹" +
+    selectedTotal;
 
 
-    /* BUTTON CHANGE */
+  /* UPI AMOUNT */
 
-    document
-    .querySelectorAll(".add")
-    .forEach(function(button){
-
-      button.classList.remove("added");
-
-      button.innerText =
-      "🛒 ADD TO CART";
-
-    });
+  document.getElementById("upiAmount").innerText =
+    selectedTotal;
 
 
-    add.classList.add("added");
+  /* UPI LINK */
 
-    add.innerText =
-    "✓ ADDED TO CART";
+  updateUPILink();
 
 
-    /* ORDER BOX */
+  /* SHOW ORDER BOX */
 
-    document
-    .getElementById("orderBox")
-    .scrollIntoView({
+  const orderBox =
+    document.getElementById("orderBox");
+
+  orderBox.style.display = "block";
+
+
+  /* SCROLL */
+
+  setTimeout(function(){
+
+    orderBox.scrollIntoView({
       behavior:"smooth",
       block:"center"
     });
 
-  };
+  },100);
 
-});
+}
 
 
-/* ================= PLACE ORDER ================= */
+/* =========================
+   PAYMENT SELECT
+========================= */
 
-document
-.getElementById("placeBtn")
-.onclick = function(){
+function selectPayment(type){
+
+  selectedPayment = type;
+
+  const upiOption =
+    document.getElementById("upiOption");
+
+  const codOption =
+    document.getElementById("codOption");
+
+  const upiBox =
+    document.getElementById("upiBox");
+
+
+  if(type === "UPI"){
+
+    upiOption.classList.add("selected");
+
+    codOption.classList.remove("selected");
+
+    upiBox.style.display = "block";
+
+    updateUPILink();
+
+  }
+  else{
+
+    codOption.classList.add("selected");
+
+    upiOption.classList.remove("selected");
+
+    upiBox.style.display = "none";
+
+  }
+
+}
+
+
+/* =========================
+   UPI LINK
+========================= */
+
+function updateUPILink(){
+
+  const upiID =
+    "9322209442-2@ybl";
 
   const name =
-  document
-  .getElementById("name")
-  .value
-  .trim();
+    "SP Desi Eggs Farm";
 
+  const amount =
+    selectedTotal || 0;
+
+  const upiURL =
+    "upi://pay" +
+    "?pa=" + encodeURIComponent(upiID) +
+    "&pn=" + encodeURIComponent(name) +
+    "&am=" + encodeURIComponent(amount) +
+    "&cu=INR";
+
+  document.getElementById("upiPayButton").href =
+    upiURL;
+
+}
+
+
+/* =========================
+   OPEN UPI
+========================= */
+
+function openUPI(event){
+
+  event.preventDefault();
+
+  if(selectedTotal <= 0){
+
+    alert("कृपया आधी Product निवडा.");
+
+    return;
+
+  }
+
+  updateUPILink();
+
+  window.location.href =
+    document.getElementById("upiPayButton").href;
+
+}
+
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+function placeOrder(){
+
+  const name =
+    document.getElementById("name").value.trim();
 
   const phone =
-  document
-  .getElementById("phone")
-  .value
-  .replace(/\D/g,"");
-
+    document.getElementById("phone").value.trim();
 
   const address =
-  document
-  .getElementById("address")
-  .value
-  .trim();
+    document.getElementById("address").value.trim();
 
 
   /* PRODUCT CHECK */
 
   if(selectedProduct === ""){
 
-    alert(
-      "आधी Product निवडा आणि ADD TO CART दाबा."
-    );
+    alert("कृपया आधी Product निवडा.");
 
     return;
 
   }
 
 
-  /* NAME CHECK */
+  /* NAME */
 
   if(name === ""){
 
-    alert(
-      "कृपया तुमचे नाव टाका."
-    );
+    alert("कृपया तुमचे नाव टाका.");
 
-    document
-    .getElementById("name")
-    .focus();
+    document.getElementById("name").focus();
 
     return;
 
   }
 
 
-  /* MOBILE CHECK */
+  /* PHONE */
 
-  if(phone.length !== 10){
+  if(phone === ""){
 
-    alert(
-      "कृपया योग्य 10 अंकी मोबाईल नंबर टाका."
-    );
+    alert("कृपया मोबाईल नंबर टाका.");
 
-    document
-    .getElementById("phone")
-    .focus();
+    document.getElementById("phone").focus();
 
     return;
 
   }
 
 
-  /* ADDRESS CHECK */
+  if(!/^[0-9]{10}$/.test(phone)){
+
+    alert("कृपया योग्य 10 अंकी मोबाईल नंबर टाका.");
+
+    document.getElementById("phone").focus();
+
+    return;
+
+  }
+
+
+  /* ADDRESS */
 
   if(address === ""){
 
-    alert(
-      "कृपया Delivery Address टाका."
-    );
+    alert("कृपया Delivery Address टाका.");
 
-    document
-    .getElementById("address")
-    .focus();
+    document.getElementById("address").focus();
+
+    return;
+
+  }
+
+
+  /* PAYMENT */
+
+  if(selectedPayment === ""){
+
+    alert("कृपया Payment Method निवडा.");
 
     return;
 
@@ -1164,72 +1140,105 @@ document
   /* ORDER ID */
 
   const orderId =
-  "SP"
-  + Date.now()
-  .toString()
-  .slice(-7);
+    "SP" +
+    Date.now().toString().slice(-7);
 
 
   /* WHATSAPP NUMBER */
 
   const whatsapp =
-  "919322209442";
+    "919322209442";
 
 
-  /* MESSAGE */
+  /* PAYMENT TEXT */
+
+  let paymentText = "";
+
+  if(selectedPayment === "UPI"){
+
+    paymentText =
+      "Payment Method: UPI\n" +
+      "UPI ID: 9322209442-2@ybl\n" +
+      "Payment Status: Customer will pay via UPI";
+
+  }
+  else{
+
+    paymentText =
+      "Payment Method: Cash on Delivery";
+
+  }
+
+
+  /* WHATSAPP MESSAGE */
 
   const message =
 
-  "🥚 SP Desi Eggs Farm - NEW ORDER\n\n"
+    "🥚 SP Desi Eggs Farm - NEW ORDER\n\n" +
 
-  + "Order ID: "
-  + orderId
-  + "\n\n"
+    "Order ID: " +
+    orderId +
+    "\n\n" +
 
-  + "Product: "
-  + selectedProduct
-  + "\n"
+    "Product: " +
+    selectedProduct +
+    "\n" +
 
-  + "Quantity: "
-  + selectedQuantity
-  + " Pack\n"
+    "Quantity: " +
+    selectedQuantity +
+    " Pack\n" +
 
-  + "Total: ₹"
-  + selectedTotal
-  + "\n\n"
+    "Total: ₹" +
+    selectedTotal +
+    "\n\n" +
 
-  + "Customer Name: "
-  + name
-  + "\n"
+    paymentText +
+    "\n\n" +
 
-  + "Mobile: "
-  + phone
-  + "\n"
+    "Customer Name: " +
+    name +
+    "\n" +
 
-  + "Delivery Address: "
-  + address
-  + "\n\n"
+    "Mobile: " +
+    phone +
+    "\n" +
 
-  + "📍 Jalna City";
+    "Delivery Address: " +
+    address +
+    "\n\n" +
+
+    "📍 Jalna City";
+
+
+  /* WHATSAPP URL */
+
+  const url =
+
+    "https://wa.me/" +
+    whatsapp +
+    "?text=" +
+    encodeURIComponent(message);
 
 
   /* OPEN WHATSAPP */
 
-  const whatsappURL =
+  window.location.href = url;
 
-  "https://wa.me/"
-  + whatsapp
-  + "?text="
-  + encodeURIComponent(message);
+}
 
 
-  window.location.href =
-  whatsappURL;
+/* =========================
+   DEFAULT UPI DISPLAY
+========================= */
 
-};
+document.addEventListener("DOMContentLoaded",function(){
+
+  document.getElementById("upiBox").style.display =
+    "none";
+
+});
 
 </script>
-
 
 </body>
 </html>
