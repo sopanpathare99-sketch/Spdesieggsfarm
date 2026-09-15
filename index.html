@@ -664,21 +664,69 @@ block:"center"
 
 function placeOrder(){
 
-const name=
-document.getElementById("name").value.trim();
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const address = document.getElementById("address").value.trim();
 
-const phone=
-document.getElementById("phone").value.trim();
+  /* PRODUCT CHECK */
+  if(selectedProduct === ""){
+    alert("कृपया आधी Product निवडा.");
+    return;
+  }
 
-const address=
-document.getElementById("address").value.trim();
+  /* NAME CHECK */
+  if(name === ""){
+    alert("कृपया तुमचे नाव टाका.");
+    document.getElementById("name").focus();
+    return;
+  }
 
+  /* MOBILE CHECK */
+  const cleanPhone = phone.replace(/\D/g,"");
 
-if(selectedProduct===""){
+  if(cleanPhone === ""){
+    alert("कृपया मोबाईल नंबर टाका.");
+    document.getElementById("phone").focus();
+    return;
+  }
 
-alert("कृपया आधी Product निवडा.");
+  if(cleanPhone.length !== 10){
+    alert("कृपया योग्य 10 अंकी मोबाईल नंबर टाका.");
+    document.getElementById("phone").focus();
+    return;
+  }
 
-return;
+  /* ADDRESS CHECK */
+  if(address === ""){
+    alert("कृपया Delivery Address टाका.");
+    document.getElementById("address").focus();
+    return;
+  }
+
+  /* ORDER ID */
+  const orderId = "SP" + Date.now().toString().slice(-7);
+
+  /* FARM WHATSAPP NUMBER */
+  const whatsapp = "919322209442";
+
+  /* WHATSAPP MESSAGE */
+  const message =
+    "🥚 SP Desi Eggs Farm - NEW ORDER\n\n" +
+    "Order ID: " + orderId + "\n" +
+    "Product: " + selectedProduct + "\n" +
+    "Quantity: " + selectedQuantity + " Pack\n" +
+    "Total: ₹" + selectedTotal + "\n\n" +
+    "👤 Customer Name: " + name + "\n" +
+    "📱 Mobile: " + cleanPhone + "\n" +
+    "🏠 Delivery Address: " + address + "\n\n" +
+    "📍 Jalna City";
+
+  const url =
+    "https://wa.me/" + whatsapp +
+    "?text=" + encodeURIComponent(message);
+
+  /* OPEN WHATSAPP */
+  window.open(url, "_blank");
 
 }
 
